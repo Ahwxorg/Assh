@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Management;
 
 namespace Assh
 {
@@ -172,7 +173,6 @@ namespace Assh
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-
             if (File.Exists("ssh_1.txt")) {
             }
             else

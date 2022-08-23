@@ -30,9 +30,18 @@ namespace Assh
         private void InitializeComponent()
         {
             this.topPanel = new System.Windows.Forms.Panel();
+            this.minimizeBtn = new GhostButton();
+            this.closeBtn = new GhostButton();
             this.nameLabel = new System.Windows.Forms.Label();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.host7Label = new System.Windows.Forms.Label();
+            this.host6Label = new System.Windows.Forms.Label();
+            this.host5Label = new System.Windows.Forms.Label();
+            this.host4Label = new System.Windows.Forms.Label();
+            this.host3Label = new System.Windows.Forms.Label();
+            this.host2Label = new System.Windows.Forms.Label();
             this.editBtn = new GhostButton();
+            this.host1Label = new System.Windows.Forms.Label();
             this.sshBtn_6 = new GhostButton();
             this.sshBtn_7 = new GhostButton();
             this.sshBtn_5 = new GhostButton();
@@ -40,15 +49,7 @@ namespace Assh
             this.sshBtn_3 = new GhostButton();
             this.sshBtn_2 = new GhostButton();
             this.sshBtn = new GhostButton();
-            this.minimizeBtn = new GhostButton();
-            this.closeBtn = new GhostButton();
-            this.host1Label = new System.Windows.Forms.Label();
-            this.host2Label = new System.Windows.Forms.Label();
-            this.host3Label = new System.Windows.Forms.Label();
-            this.host7Label = new System.Windows.Forms.Label();
-            this.host5Label = new System.Windows.Forms.Label();
-            this.host4Label = new System.Windows.Forms.Label();
-            this.host6Label = new System.Windows.Forms.Label();
+            this.txtOutput = new System.Windows.Forms.TextBox();
             this.topPanel.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +64,46 @@ namespace Assh
             this.topPanel.Size = new System.Drawing.Size(8000, 45);
             this.topPanel.TabIndex = 1;
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindow);
+            // 
+            // minimizeBtn
+            // 
+            this.minimizeBtn.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.minimizeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeBtn.ClickAnimation = GhostButton.ClickAnimationType.Ripple;
+            this.minimizeBtn.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeBtn.Font = new System.Drawing.Font("Segoe UI", 32.25F);
+            this.minimizeBtn.ForeColor = System.Drawing.Color.White;
+            this.minimizeBtn.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.minimizeBtn.Location = new System.Drawing.Point(986, 0);
+            this.minimizeBtn.Name = "minimizeBtn";
+            this.minimizeBtn.RippleSpeed = 10;
+            this.minimizeBtn.RoundRadius = 3;
+            this.minimizeBtn.Size = new System.Drawing.Size(45, 45);
+            this.minimizeBtn.TabIndex = 1;
+            this.minimizeBtn.Text = "_";
+            this.minimizeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.minimizeBtn.UseVisualStyleBackColor = false;
+            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.closeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.closeBtn.ClickAnimation = GhostButton.ClickAnimationType.Ripple;
+            this.closeBtn.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeBtn.ForeColor = System.Drawing.Color.White;
+            this.closeBtn.Location = new System.Drawing.Point(1031, 3);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.RippleSpeed = 10;
+            this.closeBtn.RoundRadius = 3;
+            this.closeBtn.Size = new System.Drawing.Size(45, 45);
+            this.closeBtn.TabIndex = 0;
+            this.closeBtn.Text = "X";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // nameLabel
             // 
@@ -99,6 +140,72 @@ namespace Assh
             this.leftPanel.Size = new System.Drawing.Size(329, 50000);
             this.leftPanel.TabIndex = 2;
             // 
+            // host7Label
+            // 
+            this.host7Label.AutoSize = true;
+            this.host7Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.host7Label.ForeColor = System.Drawing.Color.White;
+            this.host7Label.Location = new System.Drawing.Point(175, 357);
+            this.host7Label.Name = "host7Label";
+            this.host7Label.Size = new System.Drawing.Size(38, 19);
+            this.host7Label.TabIndex = 4;
+            this.host7Label.Text = "Assh";
+            // 
+            // host6Label
+            // 
+            this.host6Label.AutoSize = true;
+            this.host6Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.host6Label.ForeColor = System.Drawing.Color.White;
+            this.host6Label.Location = new System.Drawing.Point(175, 308);
+            this.host6Label.Name = "host6Label";
+            this.host6Label.Size = new System.Drawing.Size(38, 19);
+            this.host6Label.TabIndex = 5;
+            this.host6Label.Text = "Assh";
+            // 
+            // host5Label
+            // 
+            this.host5Label.AutoSize = true;
+            this.host5Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.host5Label.ForeColor = System.Drawing.Color.White;
+            this.host5Label.Location = new System.Drawing.Point(175, 259);
+            this.host5Label.Name = "host5Label";
+            this.host5Label.Size = new System.Drawing.Size(38, 19);
+            this.host5Label.TabIndex = 5;
+            this.host5Label.Text = "Assh";
+            // 
+            // host4Label
+            // 
+            this.host4Label.AutoSize = true;
+            this.host4Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.host4Label.ForeColor = System.Drawing.Color.White;
+            this.host4Label.Location = new System.Drawing.Point(175, 210);
+            this.host4Label.Name = "host4Label";
+            this.host4Label.Size = new System.Drawing.Size(38, 19);
+            this.host4Label.TabIndex = 6;
+            this.host4Label.Text = "Assh";
+            // 
+            // host3Label
+            // 
+            this.host3Label.AutoSize = true;
+            this.host3Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.host3Label.ForeColor = System.Drawing.Color.White;
+            this.host3Label.Location = new System.Drawing.Point(175, 161);
+            this.host3Label.Name = "host3Label";
+            this.host3Label.Size = new System.Drawing.Size(38, 19);
+            this.host3Label.TabIndex = 4;
+            this.host3Label.Text = "Assh";
+            // 
+            // host2Label
+            // 
+            this.host2Label.AutoSize = true;
+            this.host2Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.host2Label.ForeColor = System.Drawing.Color.White;
+            this.host2Label.Location = new System.Drawing.Point(175, 112);
+            this.host2Label.Name = "host2Label";
+            this.host2Label.Size = new System.Drawing.Size(38, 19);
+            this.host2Label.TabIndex = 4;
+            this.host2Label.Text = "Assh";
+            // 
             // editBtn
             // 
             this.editBtn.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
@@ -117,6 +224,17 @@ namespace Assh
             this.editBtn.TabIndex = 9;
             this.editBtn.Text = "Edit hosts";
             this.editBtn.UseVisualStyleBackColor = false;
+            // 
+            // host1Label
+            // 
+            this.host1Label.AutoSize = true;
+            this.host1Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.host1Label.ForeColor = System.Drawing.Color.White;
+            this.host1Label.Location = new System.Drawing.Point(175, 63);
+            this.host1Label.Name = "host1Label";
+            this.host1Label.Size = new System.Drawing.Size(38, 19);
+            this.host1Label.TabIndex = 3;
+            this.host1Label.Text = "Assh";
             // 
             // sshBtn_6
             // 
@@ -258,122 +376,14 @@ namespace Assh
             this.sshBtn.UseVisualStyleBackColor = false;
             this.sshBtn.Click += new System.EventHandler(this.sshBtn_Click);
             // 
-            // minimizeBtn
+            // txtOutput
             // 
-            this.minimizeBtn.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.minimizeBtn.BackColor = System.Drawing.Color.Transparent;
-            this.minimizeBtn.ClickAnimation = GhostButton.ClickAnimationType.Ripple;
-            this.minimizeBtn.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.minimizeBtn.Font = new System.Drawing.Font("Segoe UI", 32.25F);
-            this.minimizeBtn.ForeColor = System.Drawing.Color.White;
-            this.minimizeBtn.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.minimizeBtn.Location = new System.Drawing.Point(986, 0);
-            this.minimizeBtn.Name = "minimizeBtn";
-            this.minimizeBtn.RippleSpeed = 10;
-            this.minimizeBtn.RoundRadius = 3;
-            this.minimizeBtn.Size = new System.Drawing.Size(45, 45);
-            this.minimizeBtn.TabIndex = 1;
-            this.minimizeBtn.Text = "_";
-            this.minimizeBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.minimizeBtn.UseVisualStyleBackColor = false;
-            this.minimizeBtn.Click += new System.EventHandler(this.minimizeBtn_Click);
-            // 
-            // closeBtn
-            // 
-            this.closeBtn.Backcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.closeBtn.BackColor = System.Drawing.Color.Transparent;
-            this.closeBtn.ClickAnimation = GhostButton.ClickAnimationType.Ripple;
-            this.closeBtn.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeBtn.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.closeBtn.ForeColor = System.Drawing.Color.White;
-            this.closeBtn.Location = new System.Drawing.Point(1031, 3);
-            this.closeBtn.Name = "closeBtn";
-            this.closeBtn.RippleSpeed = 10;
-            this.closeBtn.RoundRadius = 3;
-            this.closeBtn.Size = new System.Drawing.Size(45, 45);
-            this.closeBtn.TabIndex = 0;
-            this.closeBtn.Text = "X";
-            this.closeBtn.UseVisualStyleBackColor = false;
-            this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
-            // 
-            // host1Label
-            // 
-            this.host1Label.AutoSize = true;
-            this.host1Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.host1Label.ForeColor = System.Drawing.Color.White;
-            this.host1Label.Location = new System.Drawing.Point(175, 63);
-            this.host1Label.Name = "host1Label";
-            this.host1Label.Size = new System.Drawing.Size(38, 19);
-            this.host1Label.TabIndex = 3;
-            this.host1Label.Text = "Assh";
-            // 
-            // host2Label
-            // 
-            this.host2Label.AutoSize = true;
-            this.host2Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.host2Label.ForeColor = System.Drawing.Color.White;
-            this.host2Label.Location = new System.Drawing.Point(175, 112);
-            this.host2Label.Name = "host2Label";
-            this.host2Label.Size = new System.Drawing.Size(38, 19);
-            this.host2Label.TabIndex = 4;
-            this.host2Label.Text = "Assh";
-            // 
-            // host3Label
-            // 
-            this.host3Label.AutoSize = true;
-            this.host3Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.host3Label.ForeColor = System.Drawing.Color.White;
-            this.host3Label.Location = new System.Drawing.Point(175, 161);
-            this.host3Label.Name = "host3Label";
-            this.host3Label.Size = new System.Drawing.Size(38, 19);
-            this.host3Label.TabIndex = 4;
-            this.host3Label.Text = "Assh";
-            // 
-            // host7Label
-            // 
-            this.host7Label.AutoSize = true;
-            this.host7Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.host7Label.ForeColor = System.Drawing.Color.White;
-            this.host7Label.Location = new System.Drawing.Point(175, 357);
-            this.host7Label.Name = "host7Label";
-            this.host7Label.Size = new System.Drawing.Size(38, 19);
-            this.host7Label.TabIndex = 4;
-            this.host7Label.Text = "Assh";
-            // 
-            // host5Label
-            // 
-            this.host5Label.AutoSize = true;
-            this.host5Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.host5Label.ForeColor = System.Drawing.Color.White;
-            this.host5Label.Location = new System.Drawing.Point(175, 259);
-            this.host5Label.Name = "host5Label";
-            this.host5Label.Size = new System.Drawing.Size(38, 19);
-            this.host5Label.TabIndex = 5;
-            this.host5Label.Text = "Assh";
-            // 
-            // host4Label
-            // 
-            this.host4Label.AutoSize = true;
-            this.host4Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.host4Label.ForeColor = System.Drawing.Color.White;
-            this.host4Label.Location = new System.Drawing.Point(175, 210);
-            this.host4Label.Name = "host4Label";
-            this.host4Label.Size = new System.Drawing.Size(38, 19);
-            this.host4Label.TabIndex = 6;
-            this.host4Label.Text = "Assh";
-            // 
-            // host6Label
-            // 
-            this.host6Label.AutoSize = true;
-            this.host6Label.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.host6Label.ForeColor = System.Drawing.Color.White;
-            this.host6Label.Location = new System.Drawing.Point(175, 308);
-            this.host6Label.Name = "host6Label";
-            this.host6Label.Size = new System.Drawing.Size(38, 19);
-            this.host6Label.TabIndex = 5;
-            this.host6Label.Text = "Assh";
+            this.txtOutput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtOutput.Location = new System.Drawing.Point(334, 50);
+            this.txtOutput.Multiline = true;
+            this.txtOutput.Name = "txtOutput";
+            this.txtOutput.Size = new System.Drawing.Size(740, 607);
+            this.txtOutput.TabIndex = 3;
             // 
             // MainWindow
             // 
@@ -381,6 +391,7 @@ namespace Assh
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1077, 669);
+            this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.topPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -391,6 +402,7 @@ namespace Assh
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -415,6 +427,7 @@ namespace Assh
         private System.Windows.Forms.Label host3Label;
         private System.Windows.Forms.Label host2Label;
         private System.Windows.Forms.Label host1Label;
+        private System.Windows.Forms.TextBox txtOutput;
     }
 }
 
