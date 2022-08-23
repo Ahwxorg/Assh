@@ -1,0 +1,10 @@
+C:\Users\Prifixy\source\repos\Assh\Assh\bin\Debug\Assh.exe.config
+C:\Users\Prifixy\source\repos\Assh\Assh\bin\Debug\Assh.exe
+C:\Users\Prifixy\source\repos\Assh\Assh\bin\Debug\Assh.pdb
+C:\Users\Prifixy\source\repos\Assh\Assh\obj\Debug\Assh.csproj.AssemblyReference.cache
+C:\Users\Prifixy\source\repos\Assh\Assh\obj\Debug\Assh.MainWindow.resources
+C:\Users\Prifixy\source\repos\Assh\Assh\obj\Debug\Assh.Properties.Resources.resources
+C:\Users\Prifixy\source\repos\Assh\Assh\obj\Debug\Assh.csproj.GenerateResource.cache
+C:\Users\Prifixy\source\repos\Assh\Assh\obj\Debug\Assh.csproj.CoreCompileInputs.cache
+C:\Users\Prifixy\source\repos\Assh\Assh\obj\Debug\Assh.exe
+C:\Users\Prifixy\source\repos\Assh\Assh\obj\Debug\Assh.pdb
