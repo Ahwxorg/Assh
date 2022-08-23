@@ -24,14 +24,19 @@ namespace Assh
 
         private void sshBtn_Click(object sender, EventArgs e)
         {
-            string[] lines = System.IO.File.ReadAllLines(@"ssh_list.txt");
-            MessageBox.Show("test" + lines);
-
-            System.Diagnostics.ProcessStartInfo proc = new System.Diagnostics.ProcessStartInfo();
-            proc.FileName = @"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe";
-            proc.Arguments = "/c ssh " + lines;
-            System.Diagnostics.Process.Start(proc);
-        }
+            using (StreamReader sr = File.OpenText(@"ssh_list.txt"))
+            {
+                string ssh_h = String.Empty;
+                while ((ssh_h = sr.ReadLine()) != null)
+                {
+                    //do what you have to here
+                    System.Diagnostics.ProcessStartInfo proc1 = new System.Diagnostics.ProcessStartInfo();
+                    proc1.FileName = @"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe";
+                    proc1.Arguments = "/c ssh " + ssh_h;
+                    System.Diagnostics.Process.Start(proc1);
+                }
+            }
+         }
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
